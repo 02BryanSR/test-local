@@ -1,0 +1,4 @@
+tema 1: modelo entidad -relacion
+tema 2: modelo relacional - 1fn 2fn 3fn
+tema 3: ddl y dml
+tema 4: sintaxis y sentencias sql
