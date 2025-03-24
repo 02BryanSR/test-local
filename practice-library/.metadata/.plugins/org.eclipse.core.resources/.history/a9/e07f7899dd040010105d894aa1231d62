@@ -1,0 +1,50 @@
+package com.example.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.dto.BookDto;
+import com.example.demo.entity.Book;
+import com.example.demo.mapper.BookMapper;
+import com.example.demo.repository.BookDao;
+
+public class BookServiceImpl implements BookService{
+
+	@Autowired
+	private BookDao bookDao;
+	
+	@Autowired
+	private BookMapper mapper;
+	
+	@Override
+	public List<BookDto> getListBooks() {
+		List<BookDto> Book = this.mapper.listBookToListDtoBook(bookDao.findAll());
+	}
+
+	@Override
+	public Optional<BookDto> getById(Long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+	@Override
+	public Book createBook(BookDto book) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Book update(BookDto bookDto, Long id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String remove(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
